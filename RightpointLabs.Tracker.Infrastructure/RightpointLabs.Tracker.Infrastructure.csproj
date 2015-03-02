@@ -45,9 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistence\Collections\DeviceSnapshotCollectionDefinition.cs" />
     <Compile Include="Persistence\Collections\EntityCollectionDefinition.cs" />
     <Compile Include="Persistence\IMongoConnectionHandler.cs" />
     <Compile Include="Persistence\MongoConnectionHandler.cs" />
+    <Compile Include="Persistence\Repositories\DeviceSnapshotRepository.cs" />
     <Compile Include="Persistence\Repositories\EntityRepository.cs" />
     <Compile Include="Persistence\Repositories\IEntityRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
