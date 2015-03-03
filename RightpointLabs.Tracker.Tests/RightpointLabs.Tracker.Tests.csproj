@@ -52,6 +52,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RightpointLabs.Tracker.Domain\RightpointLabs.Tracker.Domain.csproj">
+      <Project>{01D06291-1F03-4D85-BA9B-5046F779A1F9}</Project>
+      <Name>RightpointLabs.Tracker.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RightpointLabs.Tracker.Infrastructure\RightpointLabs.Tracker.Infrastructure.csproj">
+      <Project>{1FC1F3F3-93E8-4636-87E7-5533092DFD02}</Project>
+      <Name>RightpointLabs.Tracker.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
