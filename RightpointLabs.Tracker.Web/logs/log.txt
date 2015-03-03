@@ -1,0 +1,57 @@
+2015-03-02 19:57:20,595 [] [14   ] WARN  RightpointLabs.Tracker.Application.Tracker - LoadOne threw
+System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote server returned an error: (502) Bad Gateway.
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at RightpointLabs.Tracker.Infrastructure.Services.DeviceSnapshotService.<TakeSnapshot>d__4.MoveNext() in c:\projects\Github\tracker\RightpointLabs.Tracker.Infrastructure\Services\DeviceSnapshotService.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at RightpointLabs.Tracker.Application.Tracker.<LoadOne>d__8.MoveNext() in c:\projects\Github\tracker\RightpointLabs.Tracker.Application\Tracker.cs:line 58
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at RightpointLabs.Tracker.Application.Tracker.<Execute>d__5.MoveNext() in c:\projects\Github\tracker\RightpointLabs.Tracker.Application\Tracker.cs:line 46
+2015-03-02 19:58:24,433 [] [21   ] WARN  RightpointLabs.Tracker.Application.Tracker - LoadOne threw
+System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote server returned an error: (502) Bad Gateway.
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at RightpointLabs.Tracker.Infrastructure.Services.DeviceSnapshotService.<TakeSnapshot>d__4.MoveNext() in c:\projects\Github\tracker\RightpointLabs.Tracker.Infrastructure\Services\DeviceSnapshotService.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at RightpointLabs.Tracker.Application.Tracker.<LoadOne>d__8.MoveNext() in c:\projects\Github\tracker\RightpointLabs.Tracker.Application\Tracker.cs:line 58
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at RightpointLabs.Tracker.Application.Tracker.<Execute>d__5.MoveNext() in c:\projects\Github\tracker\RightpointLabs.Tracker.Application\Tracker.cs:line 46
+2015-03-02 19:59:00,468 [] [10   ] WARN  RightpointLabs.Tracker.Application.Tracker - LoadOne threw
+System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote server returned an error: (502) Bad Gateway.
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at RightpointLabs.Tracker.Infrastructure.Services.DeviceSnapshotService.<TakeSnapshot>d__4.MoveNext() in c:\projects\Github\tracker\RightpointLabs.Tracker.Infrastructure\Services\DeviceSnapshotService.cs:line 44
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at RightpointLabs.Tracker.Application.Tracker.<LoadOne>d__8.MoveNext() in c:\projects\Github\tracker\RightpointLabs.Tracker.Application\Tracker.cs:line 58
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at RightpointLabs.Tracker.Application.Tracker.<Execute>d__5.MoveNext() in c:\projects\Github\tracker\RightpointLabs.Tracker.Application\Tracker.cs:line 46

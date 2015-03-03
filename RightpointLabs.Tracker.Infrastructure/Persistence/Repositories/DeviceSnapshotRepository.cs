@@ -6,7 +6,8 @@ namespace RightpointLabs.Tracker.Infrastructure.Persistence.Repositories
 {
     public class DeviceSnapshotRepository : EntityRepository<DeviceSnapshot>, IDeviceSnapshotRepository
     {
-        public DeviceSnapshotRepository(EntityCollectionDefinition<DeviceSnapshot> collectionDefinition) : base(collectionDefinition)
+        public DeviceSnapshotRepository(DeviceSnapshotCollectionDefinition collectionDefinition)
+            : base(collectionDefinition)
         {
         }
     }
