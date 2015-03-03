@@ -219,12 +219,11 @@ pip-log.txt
 .mr.developer.cfg
 
 # logging
-RightpointLabs.Pourcast.Web/App_Data/error-*.xml
-RightpointLabs.Pourcast.Web/transports.log.txt
-RightpointLabs.Pourcast.Web/*etransports.log.txt
+RightpointLabs.Tracker.Web/App_Data/error-*.xml
+RightpointLabs.Tracker.Web/transports.log.txt
+RightpointLabs.Tracker.Web/*etransports.log.txt
 
-# flash something
-RightpointLabs.Pourcast.Repourter/OnBoardFlash.dat*
-
-/RightpointLabs.Pourcast.Tests/FakesAssemblies
-/RightpointLabs.Pourcast.Web/logs
+/RightpointLabs.Tracker.Tests/FakesAssemblies
+/RightpointLabs.Tracker.Web/logs
+logs
+RightpointLabs.Tracker.Web/logs/log.txt
