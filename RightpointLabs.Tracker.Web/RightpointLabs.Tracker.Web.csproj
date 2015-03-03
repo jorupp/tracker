@@ -151,9 +151,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="AppSettings.config" />
     <Content Include="AppSettings.Template.config" />
-    <Content Include="ConnectionStrings.config" />
     <Content Include="ConnectionStrings.Template.config" />
     <Content Include="log4net.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
