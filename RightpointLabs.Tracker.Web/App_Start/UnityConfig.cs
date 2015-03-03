@@ -62,6 +62,8 @@ namespace RightpointLabs.Tracker.Web.App_Start
                     ConfigurationManager.AppSettings["DeviceSnapshotServiceSiteId"]
                 )));
 
+            // get it running
+            container.Resolve<Application.Tracker>();
         }
     }
 }

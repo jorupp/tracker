@@ -154,6 +154,7 @@
     <Content Include="AppSettings.Template.config" />
     <Content Include="ConnectionStrings.Template.config" />
     <Content Include="log4net.config" />
+    <None Include="Properties\PublishProfiles\tracker.labs.rightpoint.com.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
