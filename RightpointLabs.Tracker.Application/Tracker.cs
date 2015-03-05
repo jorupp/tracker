@@ -34,7 +34,18 @@ namespace RightpointLabs.Tracker.Application
 
         public DeviceSnapshot LastSnapshot
         {
-            get { return _lastDeviceSnapshot; }
+            get
+            {
+                var lds = _lastDeviceSnapshot;
+                if (null != lds && DateTime.UtcNow.Subtract(lds.Timestamp) < TimeSpan.FromMinutes(1))
+                    return lds;
+                return Task.Run(async () => await LoadOne()).Result;
+            }
+        }
+
+        public Task<DeviceSnapshot> GetNow()
+        {
+            return LoadOne();
         }
 
         private async Task Execute()
@@ -53,11 +64,12 @@ namespace RightpointLabs.Tracker.Application
             }
         }
 
-        private async Task LoadOne()
+        private async Task<DeviceSnapshot> LoadOne()
         {
             var data = await _service.TakeSnapshot();
             _lastDeviceSnapshot = data;
             _repository.Add(data);
+            return data;
         }
     }
 }

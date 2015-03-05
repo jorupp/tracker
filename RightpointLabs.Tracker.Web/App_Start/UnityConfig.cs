@@ -53,6 +53,8 @@ namespace RightpointLabs.Tracker.Web.App_Start
                 new ContainerControlledLifetimeManager(),
                 new InjectionConstructor(connectionString, database));
 
+            container.RegisterType<Application.Tracker>(new ContainerControlledLifetimeManager());
+
             container.RegisterType<IDeviceSnapshotRepository, DeviceSnapshotRepository>();
             container.RegisterType<IDeviceSnapshotService, DeviceSnapshotService>(new InjectionFactory(c =>
                 new DeviceSnapshotService(

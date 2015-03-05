@@ -3,6 +3,61 @@
     ViewBag.Title = "Home Page";
 }
 
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/knockout-3.2.0.debug.js")"></script>
+    <script type="text/javascript">
+        $(function() {
+            var vm = ko.observable({Timestamp: null, Devices: []});
+
+            function loadData() {
+                $.get("@Url.Action("LatestData")", function(data) {
+                    vm(data);
+                });
+            }
+
+            //var canvas = $("canvas")[0];
+            //vm.subscribe(function (val) {
+            //    var ctx = canvas.getContext("2d");
+            //    ctx.clearRect(0, 0, canvas.width, canvas.height);
+            //    ko.utils.arrayForEach(val.Devices, function (dev) {
+            //        if (dev.X && dev.Y) {
+            //            var x = dev.X * 6;
+            //            var y = dev.Y * 4;
+            //            ctx.fillText(dev.Name || dev.MacAddress, x, y);
+            //        }
+            //    });
+            //});
+
+            loadData();
+            setInterval(loadData, 2000);
+
+            ko.applyBindings(vm);
+        });
+    </script>
+}
+
 <p>Is running: @Model.IsRunning</p>
 
-<p>Last snapshot: @Model.LastSnapshot</p>
+<p>Timestamp: <span data-bind="text: Timestamp"></span></p>
+<svg height="600" width="1200">
+    <g data-bind="foreach: Devices">
+        <g data-bind="if: Name.toLowerCase().indexOf('rupp') >= 0 || Name.toLowerCase().indexOf('manticore') >= 0, attr: { transform: 'translate(' + (X * 6) + ',' + (Y * 4) + ')'}">
+            <circle cx="0" cy="0" r="5" fill="#00ff00"></circle>
+        </g>
+    </g>
+    <g data-bind="foreach: Devices">
+        <g data-bind="attr: { transform: 'translate(' + (X * 6) + ',' + (Y * 4) + ')'}">
+            <g data-bind="if: Name">
+                <text data-bind="text: Name"></text>
+            </g>
+        </g>
+    </g>
+</svg>
+<ul data-bind="foreach: Devices">
+    <li>
+        <span data-bind="text: Name"></span>
+        <span data-bind="text: X"></span>
+        <span data-bind="text: Y"></span>
+    </li>
+</ul>

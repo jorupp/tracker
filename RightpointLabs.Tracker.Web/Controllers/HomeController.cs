@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using RightpointLabs.Tracker.Domain;
 using RightpointLabs.Tracker.Web.Models;
 
 namespace RightpointLabs.Tracker.Web.Controllers
@@ -20,9 +22,24 @@ namespace RightpointLabs.Tracker.Web.Controllers
         {
             return View(new HomeIndexModel
             {
-                IsRunning = _tracker.IsRunning,
-                LastSnapshot = _tracker.LastSnapshot
+                IsRunning = _tracker.IsRunning
             });
+        }
+
+        public async Task<JsonResult> LatestData()
+        {
+            return Json((await _tracker.GetNow()).ChainIfNotNull(s => new
+            {
+                Timestamp = s.Timestamp.ToString("u"),
+                Devices = s.Devices.Select(i => new
+                {
+                    i.IpAddress,
+                    i.MacAddress,
+                    i.Name,
+                    i.X,
+                    i.Y,
+                }).ToArray()
+            }), JsonRequestBehavior.AllowGet);
         }
     }
 }
